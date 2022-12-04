@@ -20,7 +20,7 @@ table workout_record {
   user_id integer [ref: - user.user_id]
   movement_name text
   set_num integer
-  weight integer
+  weight float
   reps integer
   notes text
   added_at timestamp
