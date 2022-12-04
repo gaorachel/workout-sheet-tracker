@@ -1,0 +1,28 @@
+table user {
+  user_id serial [pk]
+  user_name text
+  user_email text
+  brith_date timestamp
+  added_at timestamp
+  updated_at timestamp
+}
+
+table body_measurement {
+  user_id integer [ref: - user.user_id]
+  body_weight float
+  measured_at timestamp
+  added_at timestamp
+  updated_at timestamp
+}
+
+table workout_record {
+  workout_date timestamp
+  user_id integer [ref: - user.user_id]
+  movement_name text
+  set_num integer
+  weight integer
+  reps integer
+  notes text
+  added_at timestamp
+  updated_at timestamp
+}
